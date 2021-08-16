@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: docker/backend/Dockerfile
-    command: npm run start
+    command: yarn docker
     ports:
       - "7002:7002"
     restart: always
