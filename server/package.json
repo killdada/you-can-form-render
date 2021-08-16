@@ -4,14 +4,14 @@
   "description": "",
   "private": true,
   "dependencies": {
-    "@midwayjs/bootstrap": "^2.12.3",
-    "@midwayjs/core": "^2.12.3",
-    "@midwayjs/decorator": "^2.12.3",
-    "@midwayjs/web": "^2.12.3",
-    "egg": "^2.30.0",
-    "egg-scripts": "^2.14.0",
     "fs-extra": "^10.0.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "@midwayjs/bootstrap": "^2.3.0",
+    "@midwayjs/core": "^2.3.0",
+    "@midwayjs/web": "^2.3.0",
+    "@midwayjs/decorator": "^2.3.0",
+    "egg": "^2.0.0",
+    "egg-scripts": "^2.10.0"
   },
   "devDependencies": {
     "@midwayjs/cli": "^1.2.79",
