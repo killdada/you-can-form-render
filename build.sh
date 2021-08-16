@@ -1,8 +1,7 @@
 #! /bin/sh
-git pull
-
 cd ./client
 yarn build
 
+cd ../
 docker-compose build
 docker-compose up -d
