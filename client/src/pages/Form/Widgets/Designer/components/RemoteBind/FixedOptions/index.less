@@ -1,0 +1,49 @@
+.options-container {
+  // 为了拖拽item的长度样式一致性
+  width: 550px;
+
+  .ant-empty {
+    margin: 0;
+  }
+
+  .ant-card-body {
+    padding: 0;
+  }
+}
+
+// 强制设置这个样式和之前的tr样式差别没那么大
+.options-row-dragging {
+  z-index: 2000;
+  display: flex;
+  background: #fafafa;
+  border: 1px solid #ccc;
+
+  td {
+    padding: 12px 8px;
+    border-right: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+
+    // 跟column 里面设置的width一致
+    &:nth-child(1) {
+      width: 60px;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      width: 120px;
+    }
+
+    &:nth-child(4) {
+      width: 90px;
+    }
+
+    &:nth-child(5) {
+      width: 160px;
+    }
+  }
+}
+
+.options-row-dragging .drag-visible {
+  display: block;
+  visibility: visible;
+}

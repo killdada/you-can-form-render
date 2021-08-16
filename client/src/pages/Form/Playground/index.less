@@ -1,0 +1,54 @@
+.fr-playground {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+
+  &-content {
+    padding: 0 24px;
+    > div {
+      width: 50%;
+      height: 100%;
+    }
+    .showcontent {
+      padding: 24px 0;
+      > div {
+        padding: 0 24px;
+      }
+    }
+  }
+
+  .setting-container {
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .npm__react-simple-code-editor__textarea {
+    outline: none;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .flex-auto {
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 0;
+  }
+
+  .flex-column {
+    flex-direction: column;
+  }
+
+  .items-center {
+    align-items: center;
+  }
+
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+}

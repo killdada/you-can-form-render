@@ -1,0 +1,121 @@
+{
+  "1": {
+    "formName": "实体券号",
+    "formType": 3,
+    "formCategory": 6,
+    "formDesc": "以前的实体券号新建",
+    "isNeedApprove": false,
+    "formStr": [
+      {
+        "formTitle": "申请流水号",
+        "formDefineName": "input_F07fkG"
+      },
+      {
+        "formTitle": "申请日期",
+        "formDefineName": "input_Gx_8Ik"
+      },
+      {
+        "formTitle": "产品类型",
+        "formDefineName": "radio_QfPHOZ"
+      },
+      {
+        "formTitle": "申请数量",
+        "formDefineName": "number_qz9fn0"
+      },
+      {
+        "formTitle": "备注",
+        "formDefineName": "textarea_TR7_Ui"
+      }
+    ]
+  },
+  "2": {
+    "formName": "表格",
+    "formType": 3,
+    "formCategory": 6,
+    "formDesc": "表格验证",
+    "isNeedApprove": false,
+    "formStr": [
+      {
+        "formTitle": "表格",
+        "formDefineName": "table_VAqQK5"
+      }
+    ]
+  },
+  "3": {
+    "formName": "测试1",
+    "formType": 3,
+    "formCategory": 6,
+    "isNeedApprove": false,
+    "formStr": [
+      {
+        "formTitle": "产品类型",
+        "formDefineName": "radio_QfPHOZ"
+      },
+      {
+        "formTitle": "申请数量",
+        "formDefineName": "number_qz9fn0"
+      },
+      {
+        "formTitle": "备注",
+        "formDefineName": "textarea_TR7_Ui"
+      },
+      {
+        "formTitle": "备注1",
+        "formDefineName": "textarea_G0XZXV"
+      },
+      {
+        "formTitle": "多选测试",
+        "formDefineName": "checkboxes_IB5V9n"
+      },
+      {
+        "formTitle": "输入框",
+        "formDefineName": "input_-ntPnA"
+      },
+      {
+        "formTitle": "输入框1",
+        "formDefineName": "input_JMk7rt"
+      }
+    ]
+  },
+  "4": {
+    "formName": "完整例子",
+    "formType": 3,
+    "formCategory": 3,
+    "formDesc": "测试完整例子",
+    "isNeedApprove": false,
+    "formStr": [
+      {
+        "formTitle": "省市区",
+        "formDefineName": "cityselect_Vsj9NO"
+      },
+      {
+        "formTitle": "文件上传",
+        "formDefineName": "upload_iJL00r"
+      },
+      {
+        "formTitle": "全局绑定输入",
+        "formDefineName": "input_xM_ueI"
+      },
+      {
+        "formTitle": "输入框",
+        "formDefineName": "input_-OicRv"
+      },
+      {
+        "formTitle": "输入框1",
+        "formDefineName": "input_-OicRv_SwxQsQ"
+      },
+      {
+        "formTitle": "单选",
+        "formDefineName": "radio_DqQ0v8"
+      },
+      {
+        "formTitle": "商品类目",
+        "formDefineName": "select_K914fv"
+      },
+      {
+        "formTitle": "商品类目1",
+        "formDefineName": "select_K914fv_ZvrHQH"
+      }
+    ]
+  }
+}

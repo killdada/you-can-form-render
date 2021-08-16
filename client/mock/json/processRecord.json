@@ -1,0 +1,13 @@
+{
+  "5": {
+    "id": 447,
+    "piId": "291458",
+    "businessId": 65,
+    "tableName": "m_yonghuzhuangtaishezhixinzeng",
+    "editRecord": "操作类型：由【设置黑名单】改为【设置正常】\n操作原因：由【设置黑名单 2个手机号】改为【设置正常 1个手机号】\n手机号明细：数据有变动\n",
+    "createBy": 7,
+    "createAt": "2021-07-22 17:36:19.0",
+    "updateAt": "2021-07-22 17:36:19.0",
+    "status": 0
+  }
+}

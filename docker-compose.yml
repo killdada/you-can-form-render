@@ -1,0 +1,27 @@
+version: "3.2"
+networks:
+  my-net:
+services:
+  formrenderbackend:
+    build:
+      context: .
+      dockerfile: docker/backend/Dockerfile
+    command: npm run docker
+    restart: always
+    volumes:
+      - "formrender:/node"
+    networks:
+      - my-net
+
+  nginx:
+    build:
+      context: .
+      dockerfile: docker/nginx/Dockerfile
+    networks:
+      - my-net
+    depends_on:
+      - formrenderbackend
+    ports:
+      - "81:80"
+volumes:
+  formrender:

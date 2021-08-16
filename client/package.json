@@ -1,0 +1,86 @@
+{
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "demo": "cross-env UMI_ENV=DEV HMR=none umi dev",
+    "dev-ui": "cross-env UMI_UI=1 umi dev",
+    "dev": "cross-env UMI_ENV=dev umi dev",
+    "build": "cross-env UMI_ENV=test umi build",
+    "dev-analyze": "cross-env UMI_ENV=dev ANALYZE=1 umi dev",
+    "build-analyze": "cross-env UMI_ENV=test ANALYZE=1 umi build",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write **/*.{js,jsx,tsx,ts,less,md,json}",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage",
+    "commit": "git-cz",
+    "lint": "eslint  --ext .js,.jsx,.ts,.tsx --fix src"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "commitlint -E GIT_PARAMS"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.6.2",
+    "@ant-design/pro-card": "^1.14.10",
+    "@ant-design/pro-form": "^1.33.0",
+    "@ant-design/pro-layout": "^6.23.3",
+    "@ant-design/pro-table": "^2.47.0",
+    "@umijs/preset-react": "1.8.22",
+    "ahooks": "^2.10.9",
+    "antd": "^4.16.10",
+    "array-move": "^3.0.1",
+    "dayjs": "^1.10.6",
+    "expr-eval": "^2.0.2",
+    "form-render": "^1.6.1",
+    "fr-generator": "^2.5.4",
+    "json-parse-better-errors": "^1.0.2",
+    "lodash-es": "^4.17.21",
+    "monaco-editor-webpack-plugin": "^4.1.1",
+    "normalize.css": "^8.0.1",
+    "pinyin4js": "^1.3.18",
+    "react-monaco-editor": "^0.44.0",
+    "react-sortable-hoc": "^2.0.0",
+    "store": "^2.0.12",
+    "umi": "^3.5.15"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@types/express": "^4.17.13",
+    "@types/fs-extra": "^9.0.12",
+    "@types/json-parse-better-errors": "^1.0.0",
+    "@types/lodash-es": "^4.17.4",
+    "@types/react": "^17.0.15",
+    "@types/react-dom": "^17.0.9",
+    "@types/store": "^2.0.2",
+    "@umijs/fabric": "^2.6.2",
+    "@umijs/preset-ui": "^2.2.9",
+    "@umijs/test": "^3.5.15",
+    "babel-plugin-import": "^1.13.3",
+    "commitizen": "^4.2.4",
+    "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "express": "^4.17.1",
+    "fs-extra": "^10.0.0",
+    "lint-staged": "^11.1.1",
+    "prettier": "^2.3.2",
+    "pretty-quick": "^3.1.1",
+    "react": "17.x",
+    "react-dom": "17.x",
+    "typescript": "^4.3.5",
+    "yorkie": "^2.0.0"
+  }
+}

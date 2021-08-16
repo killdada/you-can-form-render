@@ -1,0 +1,119 @@
+/* color 颜色 start */
+
+/* font */
+@default-font-family: 'PingFang SC', 'Chinese Quote', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+// 四个主色调
+@primary-color: #1b9aee; // 主色
+@success-color: #15ad31; // 成功
+@warn-color: #fa8c15; // 提示
+@danger-color: #e62412; // 警告、失败
+@color-orange: @warn-color;
+@color-red: @danger-color;
+@color-blue: @primary-color;
+@color-green: @success-color;
+@color-black: #000;
+@color-white: #fff;
+@color-gray: #f5f5f5;
+
+// bg color 背景色
+@bg-base-color: @color-gray; // 通用背景色，跟灰色一个基调
+@bg-white-color: @color-white; // 白色
+@bg-black-color: @color-black; // 纯黑色背景
+@bg-gray-color: @color-gray; // 灰色
+@divider-color: #f0f0f0; // 分割线颜色
+/* color 颜色 end */
+
+/* font 字体大小 start */
+@font-base-size: 14px; // 基础字体大小
+@font-large-title-size: 24px; // 超大标题字体大小
+@font-big-money-size: 24px; // 金额显著，字体大小
+@font-title-size: 20px; // 标题字体大小
+@font-mini-title-size: 16px; // mini 标题字体大小
+@font-head-size: 16px; // 头部字体大小
+@font-body-size: 14px; // 基础大小
+@font-mini-size: 12px; // 小号字体、一般是提示注释等
+/* font 字体大小 end */
+
+/* font 字体颜色 start */
+@base-font-color: #262626; // 标题/正文文字/T1类文字
+@title-font-color: #595959; // 正文文字/T2类文字
+@second-font-color: #8c8c8c; // 辅助文字/T3类文字
+@disabled-font-color: #bfbfbf; //占位文字/禁用文字/T4类文字
+@placeholder-font-color: #bfbfbf; //占位文字/禁用文字/T4类文字
+
+// 其他
+@color-black-65: rgba(0, 0, 0, 0.65);
+@color-black-45: rgba(0, 0, 0, 0.45);
+@color-black-85: rgba(0, 0, 0, 0.85);
+@color-black-25: rgba(0, 0, 0, 0.25);
+/* font 字体颜色 end */
+
+/* table  start*/
+@bg-table-header-color: #fafafa; // 表格头部背景
+
+/* table  end*/
+
+/* border  start*/
+@base-border-color: #d9d9d9; // border主色调
+@input-border-color: #d9d9d9; // 可交互组件的描边颜色（如 input）
+@table-border-color: #e8e8e8; // table等边框颜色，比如订单列表
+@base-border-radius: 4px; // 通用的圆角边框
+@base-m-border-radius: 8px; // 通用的圆角边框,中等
+/* border  end*/
+
+// 边距、maring padding
+// padding
+@base-xs-padding-size: 8px; // 小间距
+@base-x-padding-size: 16px; // 小号间距
+@base-m-padding-size: 24px; // 中等间距
+@base-l-padding-size: 32px; // 大间距
+
+@base-middle-padding-size: 24px; // 通用padding，24px
+@base-content-padding-size: 24px; // 通用的主题内容内边距
+@app-header-padding: 24px; // app头部左右边距
+@base-padding-size: 24px; // 通用padding
+
+// margin
+@base-xs-margin-size: 8px; // 小间距
+@base-x-margin-size: 16px; // 小号间距
+@base-m-margin-size: 24px; // 中等间距
+@base-l-margin-size: 32px; // 大间距
+
+@base-mini-margin-size: 4px; // 一般文字icon等小间隔
+@base-middle-margin-size: 8px; // 中等间距
+@base-margin-size: 16px; // 通用的margin,formItem,p标签等
+@base-large-margin-size: 24px; // card距离，大内容块等
+@base-content-margin-size: 24px; // 通用的主题内容外边距边距
+
+// 宽度
+
+// 页面整体布局相关
+@app-aside-width: 86px; // menu菜单，固定菜单的宽度
+@app-aside-second-width: 156px; // 二级菜单弹窗的宽度
+@app-header-height: 72px; // 页面头部高度
+@app-money-color: #c03131; // 金额文字颜色
+@app-home-min-width: 1200px;
+@app-head-min-width: 840px; // 最小的页面头部宽度，面包屑顶上去也是这个最小宽度
+
+// form 相关
+@form-item-search-margin-size: @base-m-margin-size; // formItem距离底部的距离， 主要是列表页search过滤的item间距
+@form-item-margin-size: @base-x-margin-size; // formItem距离底部的距离,主要指的详情页的formitem
+@form-header-margin-size: @base-l-margin-size; // form card title和底部的距离
+@form-footer-margin-size: @base-l-margin-size; // form btn和上面的距离
+@form-division-margin-size: @base-m-margin-size; // from item是小16px,其他可能formItem接其他元素，有分层的感觉用24px
+@form-item-line-height: 32px; // formItem label input行高
+
+// form-input相关
+@input-unit-size: 104px; // 一个单位
+// 下面的都是指的最短的宽度
+@input-number-size: @input-unit-size; // 使用于短数字，超短文本选项
+@short-input-size: 2 * @input-unit-size + 8; // 适用于较短文本或选项录入，儒姓名，电话号码，邮箱，身份证，ID等。
+@base-input-size: 3 * @input-unit-size + 2 * 8; // 标准输入框宽度，适用于大部分字段
+@large-input-size: 4 * @input-unit-size + 3 * 8; // 适用于较长字段录入，如较长网址，标签组，文件路径，数据名称等。
+@textarea-input-size: 5 * @input-unit-size + 4 * 8; // 适用于长字段录入，如长链接，正文（描述·摘要·简介·备注）等，通常可以预留多行空间。
+
+// 主应用子应用 z-index的分界点,一般是主应用大于100，子应用低于100
+@base-z-index: 100;

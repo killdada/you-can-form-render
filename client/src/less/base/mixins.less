@@ -1,0 +1,23 @@
+// 文字截断
+.dotdotdot() {
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+.transition(@delay: 0.5s) {
+  -webkit-transition: all @delay ease-in;
+  -moz-transition: all @delay ease-in;
+  transition: all @delay ease-in;
+}
+
+// 垂直水平都居中
+.verCenterAbs() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}

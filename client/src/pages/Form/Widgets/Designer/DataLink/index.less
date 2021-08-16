@@ -1,0 +1,86 @@
+@import '~@/less/base/var.less';
+
+.data-link-modal {
+  .ant-pro-table-search {
+    margin: 0;
+    padding: 0;
+  }
+
+  .ant-pro-table-list-toolbar-container {
+    padding-top: 0;
+  }
+
+  .ant-card-body {
+    padding: 0;
+  }
+}
+
+.data-link-modal-edit {
+  .ant-empty {
+    margin: 0;
+  }
+
+  .color-blue {
+    color: @primary-color;
+  }
+}
+
+.data-link-modal-formula {
+  .ant-modal-body {
+    height: 500px;
+    padding: 0;
+  }
+
+  &-fields {
+    .ant-pro-card-body {
+      height: 442px;
+      padding-top: @base-x-padding-size;
+      padding-bottom: @base-x-padding-size;
+      overflow-y: auto;
+    }
+
+    li {
+      line-height: 32px;
+      cursor: pointer;
+    }
+  }
+
+  &-keyboard {
+    .ant-pro-card-body {
+      padding: 0;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 2 * @base-margin-size;
+      padding: @base-xs-padding-size;
+      background: @color-gray;
+    }
+
+    li {
+      width: 38px;
+      height: 38px;
+      margin: 0 5px 5px 0;
+      line-height: 38px;
+      text-align: center;
+      background: #fff;
+      border: 1px solid @base-border-color;
+      border-radius: @base-border-radius;
+      cursor: pointer;
+
+      &:last-of-type {
+        width: 120px;
+      }
+
+      &:hover {
+        background: #fff1c2;
+        border-color: #e5e5e5;
+      }
+    }
+
+    .ant-form-item {
+      padding: 24px;
+    }
+  }
+}

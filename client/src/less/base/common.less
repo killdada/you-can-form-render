@@ -1,0 +1,49 @@
+@import './var.less';
+
+.flex {
+  display: flex;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-between-center {
+  .flex-between;
+  align-items: center;
+}
+
+// 清除浮动
+.clearfix {
+  display: block;
+  zoom: 1;
+
+  &:before,
+  &:after {
+    display: block;
+    clear: both;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+    content: ' ';
+  }
+}
+
+// 文字截断
+.dotdotdot {
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+// 垂直水平都居中
+.verCenterAbs {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
