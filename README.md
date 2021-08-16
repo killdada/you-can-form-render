@@ -28,3 +28,9 @@ yarn start
 > 前置依赖 docker docker-compose
 
 访问 http://localhost:81
+
+## 远程 demo 和文档
+
+[demo](http://ycid-form-render.yenmysoft.com.cn/)
+
+[文档](http://ycid-form-render-doc.yenmysoft.com.cn/)

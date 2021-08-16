@@ -7,6 +7,8 @@ services:
       context: .
       dockerfile: docker/backend/Dockerfile
     command: npm run docker
+    ports:
+      - "7002:7002"
     restart: always
     volumes:
       - "formrender:/node"
