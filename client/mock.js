@@ -73,7 +73,7 @@ const getMockData = ({ cwd, ignore = [], registerBabel = () => {} }) => {
     }) || []),
   ]
     .map((path) => join(cwd, path))
-    .filter((path) => path && existsSync(path) && path.includes('util'))
+    .filter((path) => path && existsSync(path) && !path.includes('util'))
     .map((path) => winPath(path));
 
   console.info(`load mock data including files ${JSON.stringify(mockPaths)}`);
