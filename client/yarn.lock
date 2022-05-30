@@ -2268,12 +2268,13 @@
   dependencies:
     vfile-message "*"
 
-"@types/vfile-message@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.npmmirror.com/@types/vfile-message/-/vfile-message-2.0.0.tgz#690e46af0fdfc1f9faae00cd049cc888957927d5"
-  integrity sha512-GpTIuDpb9u4zIO165fUy9+fXcULdD8HFRNli04GehoMVbeNq7D6OBnqSmg3lxZnC+UvgUhEWKxdKiwYUkGltIw==
+"@types/vfile-message@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmmirror.com/@types/vfile-message/-/vfile-message-1.0.0.tgz#49813fb844f343c816b68a0da2cb5cdf323bfda3"
+  integrity sha512-xUgNsNjihbTm+ijOzoZnTQda/P4Ty/PRRwAdxwO03DN+dkr1wL+IulD7eqfgqEXphz96t8zigYxwNSySEmQ9uA==
   dependencies:
-    vfile-message "*"
+    "@types/node" "*"
+    "@types/unist" "*"
 
 "@types/vfile@^3.0.0":
   version "3.0.2"
