@@ -66,16 +66,18 @@ const getMockConfig = (files) => {
  * @param param
  */
 const getMockData = ({ cwd, ignore = [], registerBabel = () => {} }) => {
-  const mockPaths = [
+  let mockPaths = [
     ...(glob.sync('mock-dist/**/*.[jt]s', {
       cwd,
       ignore,
     }) || []),
-  ]
-    .map((path) => join(cwd, path))
-    .filter((path) => path && existsSync(path) && !path.includes('util'))
-    .map((path) => winPath(path));
-
+  ];
+  console.log('原始的数据', mockPaths, JSON.stringify(mockPaths));
+  mockPaths = mockPaths.map((path) => join(cwd, path));
+  console.log('原始的数据11', mockPaths, JSON.stringify(mockPaths));
+  mockPaths = mockPaths.filter((path) => path && existsSync(path) && !path.includes('util'));
+  console.log('原始的数据22', mockPaths, JSON.stringify(mockPaths));
+  mockPaths = mockPaths.map((path) => winPath(path));
   console.info(`load mock data including files ${JSON.stringify(mockPaths)}`);
 
   // register babel
