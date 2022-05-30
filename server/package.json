@@ -34,15 +34,14 @@
     "start": "egg-scripts start --daemon --title=my-midway-project --framework=@midwayjs/web",
     "docker": "egg-scripts start  --title=my-midway-project-docker --framework=@midwayjs/web",
     "stop": "egg-scripts stop  --title=my-midway-project",
-    "start_build": "npm run build:dist && cross-env NODE_ENV=development midway-bin dev",
+    "start_build": "npm run build && cross-env NODE_ENV=development midway-bin dev",
     "dev": "cross-env ets && cross-env NODE_ENV=local midway-bin dev --ts",
     "test": "midway-bin test --ts",
     "cov": "midway-bin cov --ts",
     "lint": "mwts check",
     "lint:fix": "mwts fix",
     "ci": "npm run cov",
-    "build:dist": "midway-bin build -c",
-    "build": "node bootstrap.js",
+    "build": "midway-bin build -c",
     "check": "luckyeye"
   },
   "midway-bin-clean": [
