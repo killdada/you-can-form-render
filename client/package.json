@@ -2,9 +2,9 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "demo": "cross-env  MOCK=none UMI_ENV=DEV HMR=none umi dev",
-    "dev-ui": "cross-env UMI_UI=1  MOCK=none umi dev",
-    "dev": "cross-env UMI_ENV=dev MOCK=none umi dev",
+    "demo": "cross-env  UMI_ENV=DEV HMR=none umi dev",
+    "dev-ui": "cross-env UMI_UI=1  umi dev",
+    "dev": "cross-env UMI_ENV=dev umi dev",
     "build": "cross-env UMI_ENV=test umi build",
     "dev-analyze": "cross-env UMI_ENV=dev ANALYZE=1 umi dev",
     "build-analyze": "cross-env UMI_ENV=test ANALYZE=1 umi build",

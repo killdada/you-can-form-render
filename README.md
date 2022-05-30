@@ -10,7 +10,7 @@
 cd client
 
 yarn dev
-http://localhost:7001
+http://localhost:3000
 ```
 
 > 本地开发的数据是直接访问的 mock 接口数据，如果需要后端开发 （后端开发目前也是简单的 mock 假数据）
@@ -19,7 +19,7 @@ http://localhost:7001
 cd server
 yarn start
 
-修改client配置umi接口转发到7002端口即可
+修改client配置umi接口转发到7001端口即可
 ```
 
 ## 发布部署
