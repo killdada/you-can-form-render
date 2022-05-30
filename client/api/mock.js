@@ -1,11 +1,11 @@
-// 该服务为 vercel serve跨域处理
-const { getMockData, matchMock } = require('../umi/mock');
+const path = require('path');
+const { getMockData, matchMock } = require('../mock');
 
 module.exports = (req, res) => {
-  console.log('mock.js', req.body);
+  console.log('mock.js', req.body, req);
   try {
     const { mockData } = getMockData({
-      cwd: `../`,
+      cwd: path.join(__dirname, '../'),
     });
     const match = mockData && matchMock(req, mockData);
 

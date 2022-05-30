@@ -8,6 +8,7 @@
 # production
 /dist
 /deploy/publish
+/mock-dist
 
 # misc
 .DS_Store

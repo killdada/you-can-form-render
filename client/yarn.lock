@@ -2268,6 +2268,13 @@
   dependencies:
     vfile-message "*"
 
+"@types/vfile-message@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.npmmirror.com/@types/vfile-message/-/vfile-message-2.0.0.tgz#690e46af0fdfc1f9faae00cd049cc888957927d5"
+  integrity sha512-GpTIuDpb9u4zIO165fUy9+fXcULdD8HFRNli04GehoMVbeNq7D6OBnqSmg3lxZnC+UvgUhEWKxdKiwYUkGltIw==
+  dependencies:
+    vfile-message "*"
+
 "@types/vfile@^3.0.0":
   version "3.0.2"
   resolved "https://registry.nlark.com/@types/vfile/download/@types/vfile-3.0.2.tgz#19c18cd232df11ce6fa6ad80259bc86c366b09b9"

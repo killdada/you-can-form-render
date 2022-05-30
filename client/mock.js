@@ -1,8 +1,8 @@
 const multer = require('multer');
 const bodyParser = require('body-parser');
-const pathToRegexp = require('path-to-regexp');
 const glob = require('glob');
 const assert = require('assert');
+const { pathToRegexp } = require('path-to-regexp');
 const { existsSync } = require('fs');
 const { join } = require('path');
 
@@ -19,13 +19,14 @@ function winPath(path) {
 }
 
 const normalizeConfig = (config) => {
+  console.log('configconfigconfig', config);
   return Object.keys(config).reduce((memo, key) => {
     const handler = config[key];
     const type = typeof handler;
-    assert(
-      type === 'function' || type === 'object',
-      `mock value of ${key} should be function or object, but got ${type}`,
-    );
+    // assert(
+    //   type === 'function' || type === 'object',
+    //   `mock value of ${key} should be function or object, but got ${type}`,
+    // );
     const { method, path } = parseKey(key);
     const keys = [];
     const re = pathToRegexp(path, keys);
@@ -66,22 +67,16 @@ const getMockConfig = (files) => {
  */
 const getMockData = ({ cwd, ignore = [], registerBabel = () => {} }) => {
   const mockPaths = [
-    ...(glob.sync('mock/**/*.[jt]s', {
+    ...(glob.sync('mock-dist/**/*.[jt]s', {
       cwd,
       ignore,
     }) || []),
-    ...(glob.sync('**/_mock.[jt]s', {
-      cwd,
-      ignore,
-    }) || []),
-    '.umirc.mock.js',
-    '.umirc.mock.ts',
   ]
     .map((path) => join(cwd, path))
-    .filter((path) => path && existsSync(path))
+    .filter((path) => path && existsSync(path) && path.includes('util'))
     .map((path) => winPath(path));
 
-  debug(`load mock data including files ${JSON.stringify(mockPaths)}`);
+  console.info(`load mock data including files ${JSON.stringify(mockPaths)}`);
 
   // register babel
   registerBabel(mockPaths);
