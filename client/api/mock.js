@@ -1,17 +1,21 @@
 // 该服务为 vercel serve跨域处理
-const { getMockData, matchMock } = require('./utils');
+const { getMockData, matchMock } = require('../umi/mock');
 
 module.exports = (req, res) => {
-  const { mockData } = getMockData({
-    cwd: `../`,
-  });
-  const match = mockData && matchMock(req, mockData);
-  console.log('22,', req, res);
-  console.log('33', match, mockData);
+  console.log('mock.js', req.body);
+  try {
+    const { mockData } = getMockData({
+      cwd: `../`,
+    });
+    const match = mockData && matchMock(req, mockData);
 
-  if (match) {
-    console.log(`mock matched: [${match.method}] ${match.path}`);
-    return match.handler(req, res, next);
+    if (match) {
+      console.log(`mock matched: [${match.method}] ${match.path}`);
+      res.send(match.handler(req, res));
+    } else {
+      res.send('api接口不存在');
+    }
+  } catch (e) {
+    console.error('mock.js', e, req.body);
   }
-  return next();
 };
