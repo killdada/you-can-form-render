@@ -164,7 +164,7 @@ const matchMock = (req, mockData) => {
     // eslint-disable-next-line @typescript-eslint/no-shadow
     const { method, re, keys } = mock;
     if (method === targetMethod) {
-      const match = re.exec(targetPath);
+      const match = re.exec(targetPath || req.url);
       if (match) {
         const params = {};
         for (let i = 1; i < match.length; i += 1) {
