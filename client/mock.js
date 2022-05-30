@@ -78,6 +78,7 @@ const getMockData = ({ cwd, ignore = [], registerBabel = () => {} }) => {
       ignore,
     }) || []),
   ];
+  console.log('参数', cwd, ls);
   console.log('原始的数据没有dist目录', mockPaths1, JSON.stringify(mockPaths1));
   console.log('原始的数据', mockPaths, JSON.stringify(mockPaths));
   mockPaths = mockPaths.map((path) => join(cwd, path));
