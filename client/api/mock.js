@@ -4,7 +4,7 @@ const { getMockData, matchMock } = require('../mock');
 module.exports = (req, res) => {
   console.log('mock.js', req.body, req.url, req.method);
   // try {
-  const { mockData } = getMockData();
+  const { mockData } = getMockData('./');
   const match = mockData && matchMock(req, mockData);
 
   console.log('mmm', match);

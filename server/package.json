@@ -4,14 +4,14 @@
   "description": "",
   "private": true,
   "dependencies": {
-    "fs-extra": "^10.0.0",
-    "lodash": "^4.17.21",
     "@midwayjs/bootstrap": "^2.3.0",
     "@midwayjs/core": "^2.3.0",
-    "@midwayjs/web": "^2.3.0",
     "@midwayjs/decorator": "^2.3.0",
+    "@midwayjs/web": "^2.3.0",
     "egg": "^2.0.0",
-    "egg-scripts": "^2.10.0"
+    "egg-scripts": "^2.10.0",
+    "fs-extra": "^10.0.0",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@midwayjs/cli": "^1.2.79",
@@ -21,6 +21,7 @@
     "@types/fs-extra": "^9.0.12",
     "@types/jest": "^27.0.1",
     "@types/node": "14",
+    "@vercel/node": "^1.15.3",
     "cross-env": "^7.0.3",
     "jest": "^27.0.6",
     "mwts": "^1.2.2",
@@ -42,6 +43,7 @@
     "lint:fix": "mwts fix",
     "ci": "npm run cov",
     "build": "midway-bin build -c",
+    "build:vc": "node ./bootstrap.js",
     "check": "luckyeye"
   },
   "midway-bin-clean": [
