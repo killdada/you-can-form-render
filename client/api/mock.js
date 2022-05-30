@@ -4,12 +4,12 @@ const { getMockData, matchMock } = require('../mock');
 module.exports = (req, res) => {
   console.log('mock.js', req.body, req.url, req.method);
   // try {
-  const { mockData } = getMockData('./');
+  const { mockData } = getMockData({ cwd: path.join(__dirname, './') });
   const match = mockData && matchMock(req, mockData);
 
   console.log('mmm', match);
 
-  window.test.ii();
+  // window.test.ii();
 
   if (match) {
     console.log(`mock matched: [${match.method}] ${match.path}`);
