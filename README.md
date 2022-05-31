@@ -6,20 +6,26 @@
 
 ## 本地开发
 
-```bash
-cd client
+本地开发调试的地址都是 http://localhost:8000
 
-yarn dev
-http://localhost:3000
+### 单独调试前端使用 mock 数据调试
+
+```js
+// 启动前端
+cd client
+yarn dev:mock
 ```
 
-> 本地开发的数据是直接访问的 mock 接口数据，如果需要后端开发 （后端开发目前也是简单的 mock 假数据）
+### 同时调试后端和前端项目
 
-```bash
+```js
+// 启动后端
 cd server
-yarn start
+yarn dev
 
-修改client配置umi接口转发到7001端口即可
+// 启动前端
+cd client
+yarn dev
 ```
 
 ## 发布部署
@@ -35,3 +41,5 @@ yarn start
 [demo](http://ycid-form-render.yenmysoft.com.cn/)
 
 [文档](http://ycid-form-render-doc.yenmysoft.com.cn/)
+
+## todo 迁移到 vercel
