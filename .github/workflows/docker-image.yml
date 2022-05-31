@@ -23,7 +23,7 @@ jobs:
       - run: yarn build:client
       # 使用docker-compose发布
       - name: publish
-        uses: pennsignals/publish_docker-compose@v0.1.0
+        uses: pennsignals/publish_docker-compose@v0.1.1
         with:
           docker_compose: "docker-compose.yml"
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
