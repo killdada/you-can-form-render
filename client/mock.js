@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const glob = require('glob');
 const assert = require('assert');
 const { pathToRegexp } = require('path-to-regexp');
-const { existsSync } = require('fs');
+const { existsSync, readdir } = require('fs');
 const { join } = require('path');
 
 const VALID_METHODS = ['get', 'post', 'put', 'patch', 'delete'];
@@ -73,6 +73,10 @@ const getMockData = ({ cwd, ignore = [], registerBabel = () => {} }) => {
     }) || []),
   ];
 
+  console.info('当前参数', cwd);
+
+  console.info('当前mock数据', JSON.stringify(mockPaths));
+
   if (!mockPaths.length) {
     mockPaths = [
       ...(glob.sync('dist/mock-dist/**/*.[jt]s', {
@@ -80,7 +84,21 @@ const getMockData = ({ cwd, ignore = [], registerBabel = () => {} }) => {
         ignore,
       }) || []),
     ];
+    console.info('当前mock数据dist目录', JSON.stringify(mockPaths));
   }
+  readdir(cwd, (err, files) => {
+    if (err) {
+      console.log('当前目录没有', err);
+      throw err;
+    }
+
+    // files object contains all files names
+    // log them on console
+    files.forEach((file) => {
+      console.log('当前目录下的所有文件', file);
+    });
+  });
+
   mockPaths = mockPaths.map((path) => join(cwd, path));
   mockPaths = mockPaths.filter((path) => path && existsSync(path) && !path.includes('util'));
   mockPaths = mockPaths.map((path) => winPath(path));
