@@ -9,6 +9,10 @@ export default defineConfig({
   copy: [{
     from: 'mock-dist',
     to: 'mock-dist',
+  },
+  {
+    from: 'mock/json',
+    to: 'mock-dist/json',
   }],
   // mfsu: {
   //   production: {},

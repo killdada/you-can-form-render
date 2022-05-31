@@ -23,6 +23,10 @@ export default defineConfig({
   chainWebpack(config) {
     config.plugin('monaco-editor').use(MonacoWebpackPlugin);
   },
+  define: {
+    'process.env.REACT_APP_DOMAIN': '',
+    'process.env.REACT_APP_ENV': 'dev',
+  },
   // 加入mfsu，monaco-editor出现了一些问题
   // webpack5: {},
   // dynamicImport: {},

@@ -25,7 +25,7 @@ yarn dev
 
 // 启动前端
 cd client
-yarn dev
+yarn dev:proxy
 ```
 
 ## 发布部署
