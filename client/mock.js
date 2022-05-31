@@ -78,11 +78,31 @@ const getMockData = ({ cwd, ignore = [], registerBabel = () => {} }) => {
       ignore,
     }) || []),
   ];
+  const mockPaths2 = [
+    ...(glob.sync('mock-dist/*.[jt]s', {
+      cwd,
+      ignore,
+    }) || []),
+  ];
+  const mockPaths3 = [
+    ...(glob.sync('dist/mock-dist/*.[jt]s', {
+      cwd,
+      ignore,
+    }) || []),
+  ];
   if (!mockPaths.length) {
     mockPaths = mockPaths1;
   }
+  if (!mockPaths.length) {
+    mockPaths = mockPaths2;
+  }
+  if (!mockPaths.length) {
+    mockPaths = mockPaths3;
+  }
   console.log('参数', cwd);
   console.log('原始的数据没有dist目录', mockPaths1, JSON.stringify(mockPaths1));
+  console.log('原始的数据222', mockPaths2, JSON.stringify(mockPaths2));
+  console.log('原始的数据333', mockPaths3, JSON.stringify(mockPaths3));
   console.log('原始的数据', mockPaths, JSON.stringify(mockPaths));
   mockPaths = mockPaths.map((path) => join(cwd, path));
   console.log('原始的数据11', mockPaths, JSON.stringify(mockPaths));
