@@ -8,7 +8,7 @@
     "install:client": "cd ./client && yarn install",
     "install:server": "cd ./server && yarn install",
     "install": "yarn install:client && yarn install:server",
-    "build:client": "cd ./client && yarn build"
+    "build:client": "cd ./client && yarn build:github"
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,6 @@
 #! /bin/sh
 cd ./client
-yarn build
+yarn build:github
 
 cd ../
 docker-compose build

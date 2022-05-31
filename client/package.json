@@ -7,6 +7,7 @@
     "dev": "cross-env UMI_ENV=dev MOCK=none umi dev",
     "dev:mock": "cross-env UMI_ENV=mock umi dev",
     "build": "cross-env UMI_ENV=test umi build",
+    "build:github": "cross-env UMI_ENV=github umi build",
     "dev-analyze": "cross-env UMI_ENV=dev ANALYZE=1 umi dev",
     "build-analyze": "cross-env UMI_ENV=test ANALYZE=1 umi build",
     "postinstall": "umi generate tmp",
