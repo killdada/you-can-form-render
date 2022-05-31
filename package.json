@@ -1,0 +1,22 @@
+{
+  "name": "you-can-form-render",
+  "version": "1.0.0",
+  "description": "## 初始化依赖",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install:client": "cd ./client && yarn install",
+    "install:server": "cd ./server && yarn install",
+    "install": "yarn install:client && yarn install:server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/killdada/you-can-form-render.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/killdada/you-can-form-render/issues"
+  },
+  "homepage": "https://github.com/killdada/you-can-form-render#readme"
+}
