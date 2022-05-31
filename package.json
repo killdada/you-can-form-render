@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "install:client": "cd ./client && yarn install",
     "install:server": "cd ./server && yarn install",
-    "install": "yarn install:client && yarn install:server"
+    "install": "yarn install:client && yarn install:server",
+    "build:client": "cd ./client && yarn build"
   },
   "repository": {
     "type": "git",
