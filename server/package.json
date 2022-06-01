@@ -44,7 +44,7 @@
     "ci": "npm run cov",
     "build:midway": "midway-bin build -c",
     "dev:vercel": "node index.js",
-    "build": "node ./index.js",
+    "build": "yarn build:midway && node ./index.js",
     "check": "luckyeye"
   },
   "midway-bin-clean": [
