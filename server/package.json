@@ -42,8 +42,9 @@
     "lint": "mwts check",
     "lint:fix": "mwts fix",
     "ci": "npm run cov",
-    "build": "midway-bin build -c",
-    "build:vc": "node ./bootstrap.js",
+    "build:midway": "midway-bin build -c",
+    "dev:vercel": "node index.js",
+    "build": "node ./index.js",
     "check": "luckyeye"
   },
   "midway-bin-clean": [
