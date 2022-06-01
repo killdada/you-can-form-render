@@ -7,6 +7,7 @@ import { join } from 'path';
 
 const BODY_PARSED_METHODS = ['post', 'put', 'patch', 'delete'];
 
+
 function winPath(path: any) {
   const isExtendedLengthPath = /^\\\\\?\\/.test(path);
   if (isExtendedLengthPath) {
@@ -67,15 +68,16 @@ const getMockData = ({ cwd, ignore = [] }) => {
 
   console.info('当前参数', cwd);
 
-  console.info('当前mock数据', JSON.stringify(mockPaths));
+  console.info('当前mock数据,本地vercel dev的时候指向的mock目录', JSON.stringify(mockPaths));
 
   if (!mockPaths.length) {
     mockPaths = [
-      ...(glob.sync('api/mock/**/*.[jt]s', {
+      ...(glob.sync('mock-dist/**/*.[jt]s', {
         cwd,
         ignore,
       }) || []),
     ];
+    console.info('当前mock数据,本地vercel 构建的时候指向的mock目录', JSON.stringify(mockPaths));
   }
 
   readdir(cwd, (err, files) => {
