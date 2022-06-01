@@ -69,6 +69,15 @@ const getMockData = ({ cwd, ignore = [] }) => {
 
   console.info('当前mock数据', JSON.stringify(mockPaths));
 
+  if (!mockPaths.length) {
+    mockPaths = [
+      ...(glob.sync('api/mock/**/*.[jt]s', {
+        cwd,
+        ignore,
+      }) || []),
+    ];
+  }
+
   readdir(cwd, (err, files) => {
     if (err) {
       console.log('当前目录没有', err);
@@ -110,6 +119,7 @@ function parseKey(key) {
     method = splited[0].toLowerCase();
     path = splited[1]; // eslint-disable-line
   }
+
   return {
     method,
     path,
@@ -161,7 +171,6 @@ function decodeParam(val) {
 const matchMock = (req, mockData) => {
   const { path: targetPath, method } = req;
   const targetMethod = method.toLowerCase();
-
   // eslint-disable-next-line no-restricted-syntax
   for (const mock of mockData) {
     // eslint-disable-next-line @typescript-eslint/no-shadow
@@ -180,6 +189,7 @@ const matchMock = (req, mockData) => {
           }
         }
         req.params = params;
+
         return mock;
       }
     }
