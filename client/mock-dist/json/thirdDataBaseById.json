@@ -1,0 +1,62 @@
+{
+  "23": [
+    {
+      "appId": 23,
+      "createAt": "2021-06-03 16:35:40",
+      "createBy": 342,
+      "id": 190,
+      "interfaceMethod": 1,
+      "interfaceName": "数据绑定其他接口测试(customer、customer1)",
+      "interfaceNamePy": "SJRZ",
+      "interfaceUrl": "/api/v1/supplier-settle/erp-apply",
+      "isUsed": 1,
+      "remark": "",
+      "status": 0,
+      "updateAt": "2021-06-03 16:35:40"
+    },
+    {
+      "appId": 23,
+      "createAt": "2021-06-03 16:36:13",
+      "createBy": 342,
+      "id": 191,
+      "interfaceMethod": 1,
+      "interfaceName": "table表格数据绑定",
+      "interfaceNamePy": "SJRZSHTG",
+      "interfaceUrl": "/api/v1/supplier-settle/erp-audit",
+      "isUsed": 1,
+      "remark": "",
+      "status": 0,
+      "updateAt": "2021-06-03 16:36:13"
+    }
+  ],
+  "2": [
+    {
+      "appId": 2,
+      "createAt": "2020-03-13 11:20:18",
+      "createBy": 9,
+      "id": 30,
+      "interfaceMethod": 0,
+      "interfaceName": "全局表单接口测试（seq）",
+      "interfaceNamePy": "HQXTBH",
+      "interfaceUrl": "/api/v1/seq/query",
+      "isUsed": 1,
+      "remark": "",
+      "status": 0,
+      "updateAt": "2020-03-13 11:20:18"
+    },
+    {
+      "appId": 2,
+      "createAt": "2020-11-05 15:51:48",
+      "createBy": 342,
+      "id": 122,
+      "interfaceMethod": 1,
+      "interfaceName": "select选项测试(categoryId、categoryName、categoryName1)",
+      "interfaceNamePy": "LQSPLMLB",
+      "interfaceUrl": "/api/v1/product/categoryList",
+      "isUsed": 1,
+      "remark": "",
+      "status": 0,
+      "updateAt": "2020-11-05 15:51:48"
+    }
+  ]
+}

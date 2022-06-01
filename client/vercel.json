@@ -7,7 +7,7 @@
   ],
   "functions": {
     "api/mock.ts": {
-      "includeFiles": "mock/**"
+      "includeFiles": "mock-dist/**"
     }
   }
 }

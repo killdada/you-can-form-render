@@ -1,0 +1,24 @@
+[
+  {
+    "id": 6,
+    "categoryName": "测试表单分类",
+    "isEnable": 1,
+    "sort": 3,
+    "remark": "",
+    "createBy": 9,
+    "createAt": "2020-08-11 10:12:56.0",
+    "updateAt": "2020-08-11 10:12:56.0",
+    "status": 0
+  },
+  {
+    "id": 3,
+    "categoryName": "测试表单分类1",
+    "isEnable": 1,
+    "sort": 22,
+    "remark": "",
+    "createBy": 1,
+    "createAt": "2020-05-22 18:57:38.0",
+    "updateAt": "2020-08-31 17:03:25.0",
+    "status": 0
+  }
+]

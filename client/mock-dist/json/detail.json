@@ -1,0 +1,109 @@
+{
+  "2": {
+    "table_VAqQK5": [
+      {
+        "0": {
+          "startCard": "212",
+          "endCard": "212",
+          "applyCount": "1",
+          "productCode": "43434434",
+          "semiSeq": "202006231528382633981",
+          "productCategory": 10001,
+          "salesPlatformName": "万千瓦",
+          "testSelect": ["21", "212", "1"],
+          "cardTypeName": "次卡",
+          "cardProduceDate": "2020-06-23",
+          "cardProductState": 2,
+          "cardProductStateText": "制卡成功",
+          "date": "2021-07-01",
+          "id": 1627551355880
+        },
+        "startCard": "212",
+        "endCard": "212",
+        "applyCount": "1",
+        "productCode": "43434434",
+        "semiSeq": "202006231528382633981",
+        "productCategory": 10096,
+        "salesPlatformName": "万千瓦",
+        "testSelect": ["21", "212", "1"],
+        "cardTypeName": "次卡",
+        "cardProduceDate": "2020-06-23",
+        "cardProductState": 2,
+        "cardProductStateText": "制卡成功",
+        "date": "2021-07-01",
+        "id": 1627551355880
+      },
+      {
+        "1": {
+          "startCard": "测试",
+          "endCard": "切武器",
+          "applyCount": "万千瓦",
+          "productCode": "万千瓦",
+          "productCategory": 10057,
+          "salesPlatformName": "万千瓦",
+          "testSelect": ["21", "212"],
+          "semiSeq": "202006231528382633981",
+          "cardTypeName": "次卡",
+          "cardProduceDate": "2020-06-23",
+          "cardProductState": 2,
+          "cardProductStateText": "制卡成功",
+          "date": "2021-07-07",
+          "id": 1627551485849
+        },
+        "startCard": "测试",
+        "endCard": "切武器",
+        "applyCount": "万千瓦",
+        "productCode": "万千瓦",
+        "productCategory": 10096,
+        "salesPlatformName": "万千瓦",
+        "testSelect": ["21", "212"],
+        "semiSeq": "202006231528382633981",
+        "cardTypeName": "次卡",
+        "cardProduceDate": "2020-06-23",
+        "cardProductState": 2,
+        "cardProductStateText": "制卡成功",
+        "date": "2021-07-07",
+        "id": 1627551485849
+      },
+      {
+        "2": {
+          "startCard": "测1试",
+          "endCard": "切武器",
+          "applyCount": "万千瓦",
+          "productCode": "万千瓦",
+          "productCategory": 10057,
+          "salesPlatformName": "万千瓦",
+          "testSelect": ["21", "212"],
+          "semiSeq": "202006231528382633981",
+          "cardTypeName": "次卡",
+          "cardProduceDate": "2020-06-23",
+          "cardProductState": 2,
+          "cardProductStateText": "制卡成功",
+          "date": "2021-07-07",
+          "id": 1627551485844
+        },
+        "startCard": "测1试",
+        "endCard": "切武器",
+        "applyCount": "万千瓦",
+        "productCode": "万千瓦",
+        "productCategory": 10138,
+        "salesPlatformName": "万千瓦",
+        "testSelect": ["21", "212"],
+        "semiSeq": "202006231528382633981",
+        "cardTypeName": "次卡",
+        "cardProduceDate": "2020-06-23",
+        "cardProductState": 2,
+        "cardProductStateText": "制卡成功",
+        "date": "2021-07-07",
+        "id": 1627551485844
+      }
+    ]
+  },
+  "3": {
+    "radio_QfPHOZ": "1",
+    "textarea_TR7_Ui": "216723",
+    "input_-ntPnA": "186",
+    "input_JMk7rt": "2",
+    "seq": 2014154154
+  }
+}

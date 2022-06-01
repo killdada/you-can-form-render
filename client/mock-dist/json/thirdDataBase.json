@@ -1,0 +1,22 @@
+[
+  {
+    "id": 23,
+    "appName": "数据绑定",
+    "appUrl": "http://test1.com",
+    "remark": "供应商入驻考核-开放供应链",
+    "createBy": 1,
+    "createAt": "2021-06-03 12:15:37",
+    "updateAt": "2021-06-03 12:15:37",
+    "status": 0
+  },
+  {
+    "id": 2,
+    "appName": "全局表单、select绑定",
+    "appUrl": "http://test.com",
+    "remark": "",
+    "createBy": 1,
+    "createAt": "2020-03-09 16:37:25",
+    "updateAt": "2020-03-09 16:37:27",
+    "status": 0
+  }
+]
