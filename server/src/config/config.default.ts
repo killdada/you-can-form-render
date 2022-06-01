@@ -21,5 +21,9 @@ export default (appInfo: EggAppInfo) => {
     csrf: false,
   };
 
+  config.egg = {
+    port: 7001,
+  };
+
   return config;
 };

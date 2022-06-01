@@ -31,14 +31,20 @@ const getDesinData = async (params: any) => {
 export class FormController {
   // 获取schema信息
   @Get('/form/schema/:id?')
-  async schema(@Param(ALL) params: any): Promise<any> {
+  async schema(
+    @Param(ALL)
+    params: any
+  ): Promise<any> {
     const data = getMockDataByPath('schema', params.id);
     return data;
   }
 
   // 获取表单详情
   @Get('/form/detail/:id?')
-  async form(@Param(ALL) params: any): Promise<any> {
+  async form(
+    @Param(ALL)
+    params: any
+  ): Promise<any> {
     const data = getMockDataByPath('detail', params.id);
     return data;
   }
@@ -46,8 +52,10 @@ export class FormController {
   // 保存schema信息
   @Post('/form/schema/:id?')
   async saveschema(
-    @Body(ALL) body: any,
-    @Param(ALL) params: any
+    @Body(ALL)
+    body: any,
+    @Param(ALL)
+    params: any
   ): Promise<any> {
     const data = await saveMockDataByPath('schema', body, params.id);
     return data;
@@ -55,7 +63,12 @@ export class FormController {
 
   // 保存表单详情
   @Post('/form/detail/:id?')
-  async saveform(@Body(ALL) body: any, @Param(ALL) params: any): Promise<any> {
+  async saveform(
+    @Body(ALL)
+    body: any,
+    @Param(ALL)
+    params: any
+  ): Promise<any> {
     const data = await saveMockDataByPath('detail', body, params.id);
     return data;
   }
@@ -76,7 +89,10 @@ export class FormController {
 
   // 设计时新增一个表单
   @Post('/design/form/add')
-  async add(@Body(ALL) body: any): Promise<any> {
+  async add(
+    @Body(ALL)
+    body: any
+  ): Promise<any> {
     const { data: allSchema = {} } = await getMockDataByPath('schema');
     const allSchemaArr = Object.keys(allSchema) || [];
     // 取所有schema最后一项的key当做当前的id，然后再递增 ++
@@ -99,7 +115,10 @@ export class FormController {
 
   // 更新
   @Post('/design/form/update')
-  async update(@Body(ALL) body: any): Promise<any> {
+  async update(
+    @Body(ALL)
+    body: any
+  ): Promise<any> {
     const { fileText, id, ...other } = body;
     const { formStr, ...data } = other || {};
     // schema数据 以前的formPage.fileText
@@ -119,7 +138,10 @@ export class FormController {
 
   // 获取运行时表单数据结构
   @Get('/design/form/detail/:id?')
-  async runForm(@Param(ALL) params: any): Promise<any> {
+  async runForm(
+    @Param(ALL)
+    params: any
+  ): Promise<any> {
     const data = await getDesinData(params);
     // 组装表单详情产生的业务数据，以前的接口是一起返回的
     const { data: businessData } = getMockDataByPath('detail', params.id, {});
@@ -140,7 +162,10 @@ export class FormController {
 
   // 获取设计时表单数据结构
   @Get('/design/form/get/:id?')
-  async designForm(@Param(ALL) params: any): Promise<any> {
+  async designForm(
+    @Param(ALL)
+    params: any
+  ): Promise<any> {
     const data = await getDesinData(params);
     return {
       status: 0,
@@ -158,3 +183,4 @@ export class FormController {
     };
   }
 }
+

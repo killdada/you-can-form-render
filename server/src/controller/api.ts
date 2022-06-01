@@ -13,8 +13,12 @@ export class APIController {
   userService: UserService;
 
   @Post('/get_user')
-  async getUser(@Query() uid: string): Promise<IGetUserResponse> {
+  async getUser(
+    @Query('uid')
+    uid: string
+  ): Promise<IGetUserResponse> {
     const user = await this.userService.getUser({ uid });
     return { success: true, message: 'OK', data: user };
   }
 }
+

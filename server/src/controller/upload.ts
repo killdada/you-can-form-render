@@ -13,7 +13,10 @@ import { getMockDataByPath } from './util';
 export class UploadController {
   // 内网图片获取可访问的url地址
   @Get('/getFile')
-  async getFile(@Query(ALL) query: any): Promise<any> {
+  async getFile(
+    @Query(ALL)
+    query: any
+  ): Promise<any> {
     const data = getMockDataByPath('upload', query.fileName);
     return data;
   }
@@ -32,3 +35,4 @@ export class UploadController {
     return data;
   }
 }
+

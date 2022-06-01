@@ -23,21 +23,30 @@ export class FlowController {
 
   // 表单提交保存草稿
   @Post('/design/proc/save')
-  async getListEmployeeRelation(@Body(ALL) body: any): Promise<any> {
+  async getListEmployeeRelation(
+    @Body(ALL)
+    body: any
+  ): Promise<any> {
     const data = await saveMockDataByPath('detail', body.formMap, body.formId);
     return data;
   }
 
   // 自定义表单提交数据
   @Post('/v1/activiti/design/proc/submit')
-  async submit(@Body(ALL) body: any): Promise<any> {
+  async submit(
+    @Body(ALL)
+    body: any
+  ): Promise<any> {
     const data = await saveMockDataByPath('detail', body.formMap, body.formId);
     return data;
   }
 
   // 审批接口
   @Post('/design/proc/approve')
-  async approve(@Body(ALL) body: any): Promise<any> {
+  async approve(
+    @Body(ALL)
+    body: any
+  ): Promise<any> {
     const data = await saveMockDataByPath('detail', body.formMap, body.formId);
     return data;
   }
@@ -69,14 +78,20 @@ export class FlowController {
 
   // 获取历史用户任务节点列表（用于退回指定节点选择）
   @Get('/design/proc/history/:taskId')
-  async history(@Param(ALL) params: any): Promise<any> {
+  async history(
+    @Param(ALL)
+    params: any
+  ): Promise<any> {
     const data = getMockDataByPath('taskList', params.taskId, []);
     return data;
   }
 
   // 用户个人审批意见列表添加
   @Post('/v1/activiti/design/opinion/save')
-  async opinion(@Body(ALL) body: any): Promise<any> {
+  async opinion(
+    @Body(ALL)
+    body: any
+  ): Promise<any> {
     const data = await saveMockDataByPath(
       'commentList',
       (body.opinions || []).map((item: string, index: number) => {
@@ -101,3 +116,4 @@ export class FlowController {
     return data;
   }
 }
+
