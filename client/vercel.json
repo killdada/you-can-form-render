@@ -4,5 +4,10 @@
       "source": "/api/(.*)",
       "destination": "/api/mock"
     }
-  ]
+  ],
+  "functions": {
+    "api/mock.ts": {
+      "includeFiles": "mock/**"
+    }
+  }
 }

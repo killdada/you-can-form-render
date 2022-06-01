@@ -7,7 +7,6 @@
     "dev:mock": "umi dev",
     "build": "umi build",
     "tsc:mock": "tsc -p ./mocktsconfig.json",
-    "build:vercel": "yarn tsc:mock && cross-env COPY=1 umi build",
     "dev:analyze": "cross-env UMI_ENV=dev ANALYZE=1 umi dev",
     "build:analyze": "cross-env UMI_ENV=test ANALYZE=1 umi build",
     "postinstall": "umi generate tmp",

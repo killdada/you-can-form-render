@@ -2,9 +2,6 @@ import { defineConfig } from 'umi';
 import MonacoWebpackPlugin from 'monaco-editor-webpack-plugin';
 import routes from './routes';
 
-// 构建是否需要复制文件到dist
-const isCopy = !!process.env.COPY
-
 export default defineConfig({
   title: 'form-render',
   mountElementId: 'web-form-render',
@@ -44,12 +41,4 @@ export default defineConfig({
       },
     ],
   ],
-  copy: isCopy ? [{
-    from: 'mock-dist',
-    to: 'mock-dist',
-  },
-  {
-    from: 'mock/json',
-    to: 'mock-dist/json',
-  }] : [],
 });
