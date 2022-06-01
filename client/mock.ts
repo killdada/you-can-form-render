@@ -1,15 +1,13 @@
-const multer = require('multer');
-const bodyParser = require('body-parser');
-const glob = require('glob');
-const assert = require('assert');
-const { pathToRegexp } = require('path-to-regexp');
-const { existsSync, readdir } = require('fs');
-const { join } = require('path');
+import multer from 'multer';
+import bodyParser from 'body-parser';
+import glob from 'glob';
+import { pathToRegexp } from 'path-to-regexp';
+import { existsSync, readdir } from 'fs';
+import { join } from 'path';
 
-const VALID_METHODS = ['get', 'post', 'put', 'patch', 'delete'];
 const BODY_PARSED_METHODS = ['post', 'put', 'patch', 'delete'];
 
-function winPath(path) {
+function winPath(path: any) {
   const isExtendedLengthPath = /^\\\\\?\\/.test(path);
   if (isExtendedLengthPath) {
     return path;
@@ -19,14 +17,8 @@ function winPath(path) {
 }
 
 const normalizeConfig = (config) => {
-  console.log('configconfigconfig', config);
   return Object.keys(config).reduce((memo, key) => {
     const handler = config[key];
-    const type = typeof handler;
-    // assert(
-    //   type === 'function' || type === 'object',
-    //   `mock value of ${key} should be function or object, but got ${type}`,
-    // );
     const { method, path } = parseKey(key);
     const keys = [];
     const re = pathToRegexp(path, keys);
@@ -65,9 +57,9 @@ const getMockConfig = (files) => {
  *
  * @param param
  */
-const getMockData = ({ cwd, ignore = [], registerBabel = () => {} }) => {
+const getMockData = ({ cwd, ignore = [] }) => {
   let mockPaths = [
-    ...(glob.sync('mock-dist/**/*.[jt]s', {
+    ...(glob.sync('mock/**/*.[jt]s', {
       cwd,
       ignore,
     }) || []),
@@ -77,15 +69,6 @@ const getMockData = ({ cwd, ignore = [], registerBabel = () => {} }) => {
 
   console.info('当前mock数据', JSON.stringify(mockPaths));
 
-  if (!mockPaths.length) {
-    mockPaths = [
-      ...(glob.sync('dist/mock-dist/**/*.[jt]s', {
-        cwd,
-        ignore,
-      }) || []),
-    ];
-    console.info('当前mock数据dist目录', JSON.stringify(mockPaths));
-  }
   readdir(cwd, (err, files) => {
     if (err) {
       console.log('当前目录没有', err);
@@ -104,8 +87,6 @@ const getMockData = ({ cwd, ignore = [], registerBabel = () => {} }) => {
   mockPaths = mockPaths.map((path) => winPath(path));
   console.info(`load mock data including files ${JSON.stringify(mockPaths)}`);
 
-  // register babel
-  registerBabel(mockPaths);
 
   // get mock data
   const mockData = normalizeConfig(getMockConfig(mockPaths));
@@ -129,10 +110,6 @@ function parseKey(key) {
     method = splited[0].toLowerCase();
     path = splited[1]; // eslint-disable-line
   }
-  assert(
-    VALID_METHODS.includes(method),
-    `Invalid method ${method} for path ${path}, please check your mock files.`,
-  );
   return {
     method,
     path,
@@ -210,7 +187,7 @@ const matchMock = (req, mockData) => {
   return undefined;
 };
 
-module.exports = {
+export {
   getMockData,
   matchMock,
   winPath,

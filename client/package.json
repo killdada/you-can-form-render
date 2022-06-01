@@ -5,8 +5,7 @@
     "dev:proxy": "cross-env UMI_ENV=DEV UMI_UI=none MOCK=none umi dev",
     "dev": "cross-env PORT=$PORT UMI_UI=none MOCK=none umi dev",
     "dev:mock": "umi dev",
-    "build": "cross-env UMI_ENV=test umi build",
-    "build:github": "umi build",
+    "build": "umi build",
     "dev:analyze": "cross-env UMI_ENV=dev ANALYZE=1 umi dev",
     "build:analyze": "cross-env UMI_ENV=test ANALYZE=1 umi build",
     "postinstall": "umi generate tmp",
@@ -14,8 +13,7 @@
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
     "commit": "git-cz",
-    "lint": "eslint  --ext .js,.jsx,.ts,.tsx --fix src",
-    "tsc:mock": "tsc -p ./mocktsconfig.json"
+    "lint": "eslint  --ext .js,.jsx,.ts,.tsx --fix src"
   },
   "config": {
     "commitizen": {
@@ -73,7 +71,6 @@
     "@umijs/preset-ui": "^2.2.9",
     "@umijs/test": "^3.5.15",
     "@vercel/node": "^1.15.3",
-    "assert": "^2.0.0",
     "babel-plugin-import": "^1.13.3",
     "body-parser": "^1.20.0",
     "commitizen": "^4.2.4",
