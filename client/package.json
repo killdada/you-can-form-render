@@ -6,6 +6,7 @@
     "dev": "cross-env PORT=$PORT UMI_UI=none MOCK=none umi dev",
     "dev:mock": "umi dev",
     "build": "umi build",
+    "vercel-build": "node ./build.js",
     "dev:analyze": "cross-env UMI_ENV=dev ANALYZE=1 umi dev",
     "build:analyze": "cross-env UMI_ENV=test ANALYZE=1 umi build",
     "postinstall": "umi generate tmp",
