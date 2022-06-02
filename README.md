@@ -41,7 +41,3 @@ yarn dev:proxy
 [demo](http://ycid-form-render.yenmysoft.com.cn/)
 
 [文档](http://ycid-form-render-doc.yenmysoft.com.cn/)
-
-## 迁移到 vercel
-
-**1112 **

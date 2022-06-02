@@ -25,5 +25,10 @@ export default (appInfo: EggAppInfo) => {
     port: 7001,
   };
 
+  config.cors = {
+    origin: 'http://form-render.yenmysoft.com.cn',
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
+  };
+
   return config;
 };

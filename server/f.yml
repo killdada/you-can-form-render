@@ -1,0 +1,18 @@
+service: form-render-backend ## 应用发布到云平台的名字
+
+provider:
+  name: aliyun ## 发布的云平台，aliyun，tencent 等
+
+deployType:
+  type: egg ## 部署的应用类型
+  version: 3.0.0
+
+package:
+  include:
+    - public ## 如果有静态文件目录，写在这里会被自动拷贝
+  exclude:
+    - package-lock.json ## 忽略 package-lock.json 文件
+
+custom:
+  customDomain:
+    domainName: false ## 自动生成域名

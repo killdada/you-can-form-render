@@ -8,6 +8,8 @@
 # production
 /dist
 /deploy/publish
+/build
+/.serverless
 
 # misc
 .DS_Store
@@ -17,3 +19,8 @@
 /src/.umi-production
 /src/.umi-test
 /.env.local
+
+
+/.serverless
+/.s
+serverless.zip
