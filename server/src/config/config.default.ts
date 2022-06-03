@@ -26,7 +26,7 @@ export default (appInfo: EggAppInfo) => {
   };
 
   config.cors = {
-    origin: 'http://form-render.yenmysoft.com.cn',
+    origin: 'https://form-render.yenmysoft.com.cn',
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
   };
 
